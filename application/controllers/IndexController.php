@@ -13,9 +13,32 @@ class IndexController extends Zend_Controller_Action
         // action body
     }
 
-	public function contactAction() {
-		
+    public function contactAction()
+    {
+        
+    }
+
+    public function exploreAction()
+    {
+        // action body
+		$contentModel = new Application_Model_Content();
+		$data = $contentModel->fetch();
+		$this->view->contents =  $data;
+    }
+
+	public function pageAction() 
+	{
+		$request = $this->getRequest();
+		$id = $request->getParam("id",null); 
+		if($id != null){
+			$content = new Application_Model_Content();
+			$data = $content->fetchById($id); 
+			$this->view->content = $data->current() ;
+		}
+		$this->view->id = $id ; 
 	}
 
 }
+
+
 

@@ -1,0 +1,11 @@
+<div class="post">
+		<h2 class="title"><a href="#"> <?php echo $this->content->title; ?> </a></h2>
+		<p class="meta"><span class="date"> <?php echo date("M d, Y",strtotime($this->content->published)) ; ?> </span>
+			<span class="posted">Posted by <a href="#"> <?php echo $this->content->author ; ?></a></span></p>
+		<div style="clear: both;">&nbsp;</div>
+		<div class="entry">
+			<p> <?php echo $this->content->body ; ?></p>
+			<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
+		</div>
+	</div>
+<div style="clear: both;">&nbsp;</div>
