@@ -1,1 +1,13 @@
-<br /><br /><center>View script for controller <b>index</b> and script/action name <b>contact</b></center>
+<?php if($this->success) : ?>
+<div class="success"> <?php echo $this->success ; ?> </div>
+
+<?php endif; ?>
+
+<?php if($this->error) : ?>
+<div class="error"> <?php echo $this->error ; ?> </div>
+
+<?php endif; ?>
+
+<div class="form"> 
+	<?php echo $this->form; ?>
+</div>

@@ -1,0 +1,15 @@
+<?php foreach($this->messages as $row ): ?>
+	<div class="post">
+			<h2 class="title"><a href="#"> <?php echo $row->name; ?> </a></h2>
+			<p class="meta"><span class="date"> <?php echo $row->website  ; ?> </span>
+				<span class="posted">Posted by <a href="#"> <?php echo $row->email ; ?></a></span></p>
+			<div style="clear: both;">&nbsp;</div>
+			<div class="entry">
+				<p> <?php echo $row->message ; ?></p>
+				<p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
+			</div>
+		</div>
+	
+<?php endforeach; ?>
+
+<div style="clear: both;">&nbsp;</div>

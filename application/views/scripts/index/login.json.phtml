@@ -1,0 +1,13 @@
+<?php if( $this->success ):  
+	
+	$data = array();
+	$data['success'] = true ;
+	echo json_encode($data);
+	
+	endif; 
+?>
+<?php if( $this->error ): ?>
+	{
+		success : false
+	}
+<?php endif; ?>

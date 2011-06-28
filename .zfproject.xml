@@ -13,14 +13,23 @@
           <actionMethod actionName="explore"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Admin">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
-      <formsDirectory enabled="false"/>
+      <formsDirectory>
+        <formFile formName="Contact"/>
+        <formFile formName="Login"/>
+      </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <modelFile modelName="Content"/>
         <dbTableDirectory>
           <dbTableFile dbTableName="Content"/>
+          <dbTableFile dbTableName="Contacts"/>
         </dbTableDirectory>
+        <modelFile modelName="Contacts"/>
+        <modelFile modelName="Service"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
@@ -36,6 +45,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Index">
             <viewScriptFile forActionName="explore"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
@@ -70,6 +82,9 @@
       <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
       <testApplicationDirectory>
         <testApplicationBootstrapFile filesystemName="bootstrap.php"/>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile filesystemName="AdminControllerTest.php"/>
+        </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>
         <testLibraryBootstrapFile filesystemName="bootstrap.php"/>

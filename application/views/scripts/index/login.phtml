@@ -1,0 +1,35 @@
+<?php if($this->error) : ?>
+<div class="error"> <?php echo $this->error ; ?> </div>
+
+<?php endif; ?>
+<div id="result">
+	
+</div>
+
+<?php echo $this->form; ?>
+<?php $this->jQuery()->enable(); ?>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		
+		$("form").submit(function(){
+			
+			jQuery.post(
+				$(this).attr('action'),
+				$(this).serialize()+"&format=json",
+				function(res){
+					 if(res.success){
+						$("#result").html(" Login 100% "); 
+					} 
+				},
+				'json' 
+				);
+			
+			
+			return false ;
+		});
+		
+		
+		
+	});
+	
+</script>
